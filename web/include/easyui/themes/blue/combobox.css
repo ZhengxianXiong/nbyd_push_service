@@ -1,0 +1,23 @@
+.combobox-item {
+    padding: 2px;
+    font-size: 12px;
+    padding: 5px;
+    margin: 1px 0;
+    padding-right: 0px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.combobox-item-hover {
+    background: #effdec;
+    border-top: 1px solid #99e290;
+    border-bottom: 1px solid #99e290;
+    color: #074000;
+}
+
+.combobox-item-selected {
+    background: #effdec;
+    border-top: 1px solid #99e290;
+    border-bottom: 1px solid #99e290;
+    color: #074000;
+}

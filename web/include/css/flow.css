@@ -1,0 +1,55 @@
+* {
+    font-size: 12px;
+}
+
+#all {
+    width: 180px;
+}
+
+.flow_blue {
+    line-height: 26px;
+    background: transparent url('..\..\images\flow\2.jpg');
+    BORDER-LEFT: 1px solid #CEE6F7;
+    border-right: 1px solid #CEE6F7;
+    border-top: 1px solid #CEE6F7;
+    border-bottom: 1px solid #CEE6F7;
+
+}
+
+.arrow_blue {
+    height: 23px;
+    background-image: url(..\..\images\flow\flow_blue_3.gif);
+
+}
+
+.flow_gray {
+    line-height: 23px;
+    background: transparent url('..\..\images\flow\1.jpg');
+}
+
+.arrow_gray {
+    height: 23px;
+    width: 30px;
+    background-image: url(..\..\images\flow\flow_gray_1.gif);
+}
+
+.button {
+    font-weight: bold;
+    background: transparent url('..\..\images\flow\flow_blue_1.gif') no-repeat scroll top right;
+    display: block;
+    float: left;
+    height: 29px;
+    margin-right: 6px;
+    width: 120px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.button:hover {
+    text-decoration: underline;
+    background: transparent url('..\..\images\flow\flow_blue_2.gif') no-repeat scroll;
+}
+

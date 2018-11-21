@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 声明资源文件 -->
+    <!--<mvc:resources mapping="/include/**" location="/include/"/>-->
+    <!--<mvc:resources mapping="/html/**" location="/html/"/>-->
+    <!--<mvc:resources mapping="/export/**" location="/export/"/>-->
+    <!--<mvc:resources mapping="/update/**" location="/update/"/>-->
+    <!--<mvc:resources mapping="/erwm/**" location="/erwm/"/>-->
+    <!-- 启用spring mvc 注解-->
+    <mvc:annotation-driven/>
+
+    <!-- 自动扫描且只扫描@Controller -->
+    <context:component-scan base-package="com.sunland" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:include-filter type="annotation"
+                                expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+    </context:component-scan>
+
+    <bean id="stringConverter"
+          class="org.springframework.http.converter.StringHttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/plain;charset=UTF-8</value>
+                <value>text/html;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 输出对象转JSON支持 -->
+    <bean id="jsonConverter"
+          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <!-- 属性设置是避免IE执行ajax时,返回json出现下载文件 -->
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/plain;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 字符转换, 同时解决接口的中文乱码问题 -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="stringConverter"/>
+                <ref bean="jsonConverter"/>
+            </list>
+        </property>
+    </bean>
+
+    <mvc:interceptors>
+        <!--test. maybe for log -->
+        <!--<mvc:interceptor>
+            <mvc:mapping path="/**/"/>
+            <mvc:exclude-mapping path="/include/**"/>
+            <mvc:exclude-mapping path="/html/**"/>
+            <bean class="com.sunland.interceptor.AllInterceptor"/>
+        </mvc:interceptor>-->
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/"/>
+            <mvc:exclude-mapping path="/include/**"/>
+            <mvc:exclude-mapping path="/update/**"/>
+            <mvc:exclude-mapping path="/html/**"/>
+            <mvc:exclude-mapping path="/selfHelp/**"/>
+            <mvc:exclude-mapping path="/login"/>
+            <mvc:exclude-mapping path="/vio/api/imgUpload"/>
+            <mvc:exclude-mapping path="/vio/api/vioImgShow"/>
+            <mvc:exclude-mapping path="/vio/api/showImage"/>
+            <mvc:exclude-mapping path="/vio/api/vioImgShow2"/>
+            <mvc:exclude-mapping path="/vio/vioDealApi/checkPerID"/>
+            <mvc:exclude-mapping path="/vio/vioDealApi/getDsrInfo"/>
+            <mvc:exclude-mapping path="/vio/showVioDetail"/>
+            <mvc:exclude-mapping path="/vio/vioDetail"/>
+            <mvc:exclude-mapping path="/vio/getVioDetail"/>
+            <mvc:exclude-mapping path="/vio/api/showVioOperater"/>
+            <mvc:exclude-mapping path="/vio/api/deleImg"/>
+            <mvc:exclude-mapping path="/vio/printApi/**"/>
+            <mvc:exclude-mapping path="/timeout"/>
+            <mvc:exclude-mapping path="/kickoff"/>
+            <mvc:exclude-mapping path="/main/api/login"/>
+            <mvc:exclude-mapping path="/test/**"/>
+            <mvc:exclude-mapping path="/erwm/**"/>
+            <mvc:exclude-mapping path="/main/api/logout"/>
+            <bean class="com.sunland.interceptor.SessionInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+
+    <bean id="handlerExceptionResolver"
+          class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <!--<prop key="com.sunland.exception.AuthorizationException">redirect:/login</prop>-->
+                <prop key="com.sunland.exception.AuthorizationException">redirect:/timeout</prop>
+                <prop key="com.sunland.exception.KickOffException">redirect:/kickoff</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- 视图解析器:定义跳转的文件的前后缀 -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- 配置文件上传，如果没有使用文件上传可以不用配置，配置文件中也不必引入上传组件包 -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 默认编码 -->
+        <property name="defaultEncoding" value="utf-8"/>
+        <!-- 文件大小最大值 -->
+        <property name="maxUploadSize" value="10485760000"/>
+        <!-- 内存中的最大值 -->
+        <property name="maxInMemorySize" value="40960"/>
+    </bean>
+
+</beans>

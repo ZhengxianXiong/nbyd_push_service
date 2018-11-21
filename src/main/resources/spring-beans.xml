@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- eg: 两种方式都可以进行数据初始化 new -->
+    <!-- 1. 定义listener -->
+    <!--<bean class="com.sunland.listener.InitDataListener"/>-->
+
+    <!-- 2. 初始化写在 init-method 中 -->
+    <bean name="startQuertz" lazy-init="false" autowire="no"
+          class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="triggerAutoPushData"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="triggerAutoPushData"
+          class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <ref bean="JobAutoPushDataDetail"/>
+        </property>
+        <property name="cronExpression">
+            <value>0/10 * * * * ?</value>
+        </property>
+    </bean>
+
+    <bean id="JobAutoPushDataDetail"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="JobAutoPushData"/>
+        </property>
+        <property name="targetMethod">
+            <value>work</value>
+        </property>
+    </bean>
+
+    <bean id="JobAutoPushData" class="com.sunland.utils.JobAutoPushData"/>
+</beans>

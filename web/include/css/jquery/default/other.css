@@ -1,0 +1,62 @@
+/**
+*��cssΪ����jquery�Դ���css�⣬ʵ������Ҫ���ӵ���ʽ
+*
+**/
+.subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    padding: 10px 5px;
+}
+
+.toolbar {
+    padding: 4px 5px;
+    background: #efefef;
+    border-bottom: 1px solid #92B7D0;
+    border-left: 1px solid #92B7D0;
+    border-right: 1px solid #92B7D0;
+    border-top: 1px solid #92B7D0;
+}
+
+.td_wf {
+    border-right: 0px solid #64A4EA;
+    border-bottom: 0px solid #64A4EA;
+    font: normal 12px "����";
+    color: #000000;
+    height: 25px;
+    padding-left: 5px;
+    border-top-color: #64A4EA;
+    border-left-color: #64A4EA;
+    background: #D7E9FB;
+}
+
+.td_th {
+
+    font: normal 12px "����";
+    color: #000000;
+    height: 25px;
+    padding-left: 1px;
+    background: #D7E9FB;
+}
+
+.td_td {
+
+    font: normal 12px "����";
+    color: #000000;
+    height: 25px;
+}
+
+.searchwords {
+    color: #444;
+    font-size: 12px;
+}
+
+.showRightOverFlow {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 22px;
+    bottom: 20px;
+    border: solid 1px #432B6A;
+    z-index: 99999;
+}

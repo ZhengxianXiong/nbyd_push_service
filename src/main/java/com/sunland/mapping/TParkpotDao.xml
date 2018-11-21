@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sunland.dao.TParkpotDao">
+    <resultMap id="BaseResultMap" type="com.sunland.pojo.TParkpot">
+        <id column="PARKPOTID" property="parkpotid" jdbcType="VARCHAR"/>
+        <result column="PARKPOTNAME" property="parkpotname" jdbcType="VARCHAR"/>
+        <result column="PARKPOTTYPE" property="parkpottype" jdbcType="CHAR"/>
+        <result column="PARKPOTCLASSIFY" property="parkpotclassify" jdbcType="CHAR"/>
+        <result column="PARKPOTSTATE" property="parkpotstate" jdbcType="CHAR"/>
+        <result column="DEPTCODE" property="deptcode" jdbcType="VARCHAR"/>
+        <result column="AREAID" property="areaid" jdbcType="VARCHAR"/>
+        <result column="GROUPID" property="groupid" jdbcType="DECIMAL"/>
+        <result column="DEPARTMENT" property="department" jdbcType="VARCHAR"/>
+        <result column="ADDRESS" property="address" jdbcType="VARCHAR"/>
+        <result column="TELEPHONE" property="telephone" jdbcType="VARCHAR"/>
+        <result column="DESCRIPTION" property="description" jdbcType="VARCHAR"/>
+        <result column="PAYMODE" property="paymode" jdbcType="CHAR"/>
+        <result column="CHARGEMODE" property="chargemode" jdbcType="CHAR"/>
+        <result column="CHARGESTANDARD" property="chargestandard" jdbcType="VARCHAR"/>
+        <result column="SERVERTIMEINFO" property="servertimeinfo" jdbcType="VARCHAR"/>
+        <result column="PARKINNUM" property="parkinnum" jdbcType="DECIMAL"/>
+        <result column="PARKOUTNUM" property="parkoutnum" jdbcType="DECIMAL"/>
+        <result column="TOTALPARKLOTCOUNT" property="totalparklotcount" jdbcType="DECIMAL"/>
+        <result column="FIXEDPARKLOTCOUNT" property="fixedparklotcount" jdbcType="DECIMAL"/>
+        <result column="FREEPARKLOTCOUNT" property="freeparklotcount" jdbcType="DECIMAL"/>
+        <result column="LASTFREEPARKLOTTIME" property="lastfreeparklottime" jdbcType="TIMESTAMP"/>
+        <result column="METERCOUNT" property="metercount" jdbcType="DECIMAL"/>
+        <result column="CREATEDATE" property="createdate" jdbcType="TIMESTAMP"/>
+        <result column="SETUPTIME" property="setuptime" jdbcType="TIMESTAMP"/>
+        <result column="MAPNO" property="mapno" jdbcType="VARCHAR"/>
+        <result column="DATASOURCES" property="datasources" jdbcType="CHAR"/>
+        <result column="SOURCEKEY" property="sourcekey" jdbcType="VARCHAR"/>
+        <result column="HASCHECK" property="hascheck" jdbcType="CHAR"/>
+        <result column="LASTENDDATE" property="lastenddate" jdbcType="TIMESTAMP"/>
+        <result column="MINFREEPARKLOTCOUNT" property="minfreeparklotcount" jdbcType="DECIMAL"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    PARKPOTID, PARKPOTNAME, PARKPOTTYPE, PARKPOTCLASSIFY, PARKPOTSTATE, DEPTCODE, AREAID, 
+    GROUPID, DEPARTMENT, ADDRESS, TELEPHONE, DESCRIPTION, PAYMODE, CHARGEMODE, CHARGESTANDARD, 
+    SERVERTIMEINFO, PARKINNUM, PARKOUTNUM, TOTALPARKLOTCOUNT, FIXEDPARKLOTCOUNT, FREEPARKLOTCOUNT, 
+    LASTFREEPARKLOTTIME, METERCOUNT, CREATEDATE, SETUPTIME, MAPNO, DATASOURCES, SOURCEKEY, 
+    HASCHECK, LASTENDDATE, MINFREEPARKLOTCOUNT
+  </sql>
+
+    <select id="getAllParkpots" resultType="com.sunland.pojo.TParkpot">
+    select * from t_parkpot
+  </select>
+    <!-- 只更新停车场的空车位信息 -->
+    <update id="updateParkpotFreeCountInfo" parameterType="com.sunland.pojo.TParkpot">
+    <![CDATA[
+
+
+		update t_parkpot t set
+		t.freeparklotcount=#{freeparklotcount},t.lastfreeparklottime=#{lastfreeparklottime,jdbcType=TIMESTAMP}
+		where t.parkpotid=#{parkpotid}
+
+
+        ]]>
+  </update>
+    <select id="selectByPrimaryKey" resultType="com.sunland.pojo.TParkpot" parameterType="java.lang.String">
+    select 
+    *
+    from T_PARKPOT
+    where PARKPOTID = #{parkpotid,jdbcType=VARCHAR}
+  </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from T_PARKPOT
+    where PARKPOTID = #{parkpotid,jdbcType=VARCHAR}
+  </delete>
+    <insert id="insert" parameterType="com.sunland.pojo.TParkpot">
+    insert into T_PARKPOT (PARKPOTID, PARKPOTNAME, PARKPOTTYPE,
+      PARKPOTCLASSIFY, PARKPOTSTATE, DEPTCODE, 
+      AREAID, GROUPID, DEPARTMENT, 
+      ADDRESS, TELEPHONE, DESCRIPTION, 
+      PAYMODE, CHARGEMODE, CHARGESTANDARD, 
+      SERVERTIMEINFO, PARKINNUM, PARKOUTNUM, 
+      TOTALPARKLOTCOUNT, FIXEDPARKLOTCOUNT, FREEPARKLOTCOUNT, 
+      LASTFREEPARKLOTTIME, METERCOUNT, CREATEDATE, 
+      SETUPTIME, MAPNO, DATASOURCES, 
+      SOURCEKEY, HASCHECK, LASTENDDATE, 
+      MINFREEPARKLOTCOUNT)
+    values (#{parkpotid,jdbcType=VARCHAR}, #{parkpotname,jdbcType=VARCHAR}, #{parkpottype,jdbcType=CHAR}, 
+      #{parkpotclassify,jdbcType=CHAR}, #{parkpotstate,jdbcType=CHAR}, #{deptcode,jdbcType=VARCHAR}, 
+      #{areaid,jdbcType=VARCHAR}, #{groupid,jdbcType=DECIMAL}, #{department,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{telephone,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, 
+      #{paymode,jdbcType=CHAR}, #{chargemode,jdbcType=CHAR}, #{chargestandard,jdbcType=VARCHAR}, 
+      #{servertimeinfo,jdbcType=VARCHAR}, #{parkinnum,jdbcType=DECIMAL}, #{parkoutnum,jdbcType=DECIMAL}, 
+      #{totalparklotcount,jdbcType=DECIMAL}, #{fixedparklotcount,jdbcType=DECIMAL}, #{freeparklotcount,jdbcType=DECIMAL}, 
+      #{lastfreeparklottime,jdbcType=TIMESTAMP}, #{metercount,jdbcType=DECIMAL}, #{createdate,jdbcType=TIMESTAMP}, 
+      #{setuptime,jdbcType=TIMESTAMP}, #{mapno,jdbcType=VARCHAR}, #{datasources,jdbcType=CHAR}, 
+      #{sourcekey,jdbcType=VARCHAR}, #{hascheck,jdbcType=CHAR}, #{lastenddate,jdbcType=TIMESTAMP}, 
+      #{minfreeparklotcount,jdbcType=DECIMAL})
+  </insert>
+    <insert id="insertSelective" parameterType="com.sunland.pojo.TParkpot">
+        insert into T_PARKPOT
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="parkpotid != null">
+                PARKPOTID,
+            </if>
+            <if test="parkpotname != null">
+                PARKPOTNAME,
+            </if>
+            <if test="parkpottype != null">
+                PARKPOTTYPE,
+            </if>
+            <if test="parkpotclassify != null">
+                PARKPOTCLASSIFY,
+            </if>
+            <if test="parkpotstate != null">
+                PARKPOTSTATE,
+            </if>
+            <if test="deptcode != null">
+                DEPTCODE,
+            </if>
+            <if test="areaid != null">
+                AREAID,
+            </if>
+            <if test="groupid != null">
+                GROUPID,
+            </if>
+            <if test="department != null">
+                DEPARTMENT,
+            </if>
+            <if test="address != null">
+                ADDRESS,
+            </if>
+            <if test="telephone != null">
+                TELEPHONE,
+            </if>
+            <if test="description != null">
+                DESCRIPTION,
+            </if>
+            <if test="paymode != null">
+                PAYMODE,
+            </if>
+            <if test="chargemode != null">
+                CHARGEMODE,
+            </if>
+            <if test="chargestandard != null">
+                CHARGESTANDARD,
+            </if>
+            <if test="servertimeinfo != null">
+                SERVERTIMEINFO,
+            </if>
+            <if test="parkinnum != null">
+                PARKINNUM,
+            </if>
+            <if test="parkoutnum != null">
+                PARKOUTNUM,
+            </if>
+            <if test="totalparklotcount != null">
+                TOTALPARKLOTCOUNT,
+            </if>
+            <if test="fixedparklotcount != null">
+                FIXEDPARKLOTCOUNT,
+            </if>
+            <if test="freeparklotcount != null">
+                FREEPARKLOTCOUNT,
+            </if>
+            <if test="lastfreeparklottime != null">
+                LASTFREEPARKLOTTIME,
+            </if>
+            <if test="metercount != null">
+                METERCOUNT,
+            </if>
+            <if test="createdate != null">
+                CREATEDATE,
+            </if>
+            <if test="setuptime != null">
+                SETUPTIME,
+            </if>
+            <if test="mapno != null">
+                MAPNO,
+            </if>
+            <if test="datasources != null">
+                DATASOURCES,
+            </if>
+            <if test="sourcekey != null">
+                SOURCEKEY,
+            </if>
+            <if test="hascheck != null">
+                HASCHECK,
+            </if>
+            <if test="lastenddate != null">
+                LASTENDDATE,
+            </if>
+            <if test="minfreeparklotcount != null">
+                MINFREEPARKLOTCOUNT,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="parkpotid != null">
+                #{parkpotid,jdbcType=VARCHAR},
+            </if>
+            <if test="parkpotname != null">
+                #{parkpotname,jdbcType=VARCHAR},
+            </if>
+            <if test="parkpottype != null">
+                #{parkpottype,jdbcType=CHAR},
+            </if>
+            <if test="parkpotclassify != null">
+                #{parkpotclassify,jdbcType=CHAR},
+            </if>
+            <if test="parkpotstate != null">
+                #{parkpotstate,jdbcType=CHAR},
+            </if>
+            <if test="deptcode != null">
+                #{deptcode,jdbcType=VARCHAR},
+            </if>
+            <if test="areaid != null">
+                #{areaid,jdbcType=VARCHAR},
+            </if>
+            <if test="groupid != null">
+                #{groupid,jdbcType=DECIMAL},
+            </if>
+            <if test="department != null">
+                #{department,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="telephone != null">
+                #{telephone,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="paymode != null">
+                #{paymode,jdbcType=CHAR},
+            </if>
+            <if test="chargemode != null">
+                #{chargemode,jdbcType=CHAR},
+            </if>
+            <if test="chargestandard != null">
+                #{chargestandard,jdbcType=VARCHAR},
+            </if>
+            <if test="servertimeinfo != null">
+                #{servertimeinfo,jdbcType=VARCHAR},
+            </if>
+            <if test="parkinnum != null">
+                #{parkinnum,jdbcType=DECIMAL},
+            </if>
+            <if test="parkoutnum != null">
+                #{parkoutnum,jdbcType=DECIMAL},
+            </if>
+            <if test="totalparklotcount != null">
+                #{totalparklotcount,jdbcType=DECIMAL},
+            </if>
+            <if test="fixedparklotcount != null">
+                #{fixedparklotcount,jdbcType=DECIMAL},
+            </if>
+            <if test="freeparklotcount != null">
+                #{freeparklotcount,jdbcType=DECIMAL},
+            </if>
+            <if test="lastfreeparklottime != null">
+                #{lastfreeparklottime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="metercount != null">
+                #{metercount,jdbcType=DECIMAL},
+            </if>
+            <if test="createdate != null">
+                #{createdate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="setuptime != null">
+                #{setuptime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="mapno != null">
+                #{mapno,jdbcType=VARCHAR},
+            </if>
+            <if test="datasources != null">
+                #{datasources,jdbcType=CHAR},
+            </if>
+            <if test="sourcekey != null">
+                #{sourcekey,jdbcType=VARCHAR},
+            </if>
+            <if test="hascheck != null">
+                #{hascheck,jdbcType=CHAR},
+            </if>
+            <if test="lastenddate != null">
+                #{lastenddate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="minfreeparklotcount != null">
+                #{minfreeparklotcount,jdbcType=DECIMAL},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.sunland.pojo.TParkpot">
+        update T_PARKPOT
+        <set>
+            <if test="parkpotname != null">
+                PARKPOTNAME = #{parkpotname,jdbcType=VARCHAR},
+            </if>
+            <if test="parkpottype != null">
+                PARKPOTTYPE = #{parkpottype,jdbcType=CHAR},
+            </if>
+            <if test="parkpotclassify != null">
+                PARKPOTCLASSIFY = #{parkpotclassify,jdbcType=CHAR},
+            </if>
+            <if test="parkpotstate != null">
+                PARKPOTSTATE = #{parkpotstate,jdbcType=CHAR},
+            </if>
+            <if test="deptcode != null">
+                DEPTCODE = #{deptcode,jdbcType=VARCHAR},
+            </if>
+            <if test="areaid != null">
+                AREAID = #{areaid,jdbcType=VARCHAR},
+            </if>
+            <if test="groupid != null">
+                GROUPID = #{groupid,jdbcType=DECIMAL},
+            </if>
+            <if test="department != null">
+                DEPARTMENT = #{department,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                ADDRESS = #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="telephone != null">
+                TELEPHONE = #{telephone,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                DESCRIPTION = #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="paymode != null">
+                PAYMODE = #{paymode,jdbcType=CHAR},
+            </if>
+            <if test="chargemode != null">
+                CHARGEMODE = #{chargemode,jdbcType=CHAR},
+            </if>
+            <if test="chargestandard != null">
+                CHARGESTANDARD = #{chargestandard,jdbcType=VARCHAR},
+            </if>
+            <if test="servertimeinfo != null">
+                SERVERTIMEINFO = #{servertimeinfo,jdbcType=VARCHAR},
+            </if>
+            <if test="parkinnum != null">
+                PARKINNUM = #{parkinnum,jdbcType=DECIMAL},
+            </if>
+            <if test="parkoutnum != null">
+                PARKOUTNUM = #{parkoutnum,jdbcType=DECIMAL},
+            </if>
+            <if test="totalparklotcount != null">
+                TOTALPARKLOTCOUNT = #{totalparklotcount,jdbcType=DECIMAL},
+            </if>
+            <if test="fixedparklotcount != null">
+                FIXEDPARKLOTCOUNT = #{fixedparklotcount,jdbcType=DECIMAL},
+            </if>
+            <if test="freeparklotcount != null">
+                FREEPARKLOTCOUNT = #{freeparklotcount,jdbcType=DECIMAL},
+            </if>
+            <if test="lastfreeparklottime != null">
+                LASTFREEPARKLOTTIME = #{lastfreeparklottime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="metercount != null">
+                METERCOUNT = #{metercount,jdbcType=DECIMAL},
+            </if>
+            <if test="createdate != null">
+                CREATEDATE = #{createdate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="setuptime != null">
+                SETUPTIME = #{setuptime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="mapno != null">
+                MAPNO = #{mapno,jdbcType=VARCHAR},
+            </if>
+            <if test="datasources != null">
+                DATASOURCES = #{datasources,jdbcType=CHAR},
+            </if>
+            <if test="sourcekey != null">
+                SOURCEKEY = #{sourcekey,jdbcType=VARCHAR},
+            </if>
+            <if test="hascheck != null">
+                HASCHECK = #{hascheck,jdbcType=CHAR},
+            </if>
+            <if test="lastenddate != null">
+                LASTENDDATE = #{lastenddate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="minfreeparklotcount != null">
+                MINFREEPARKLOTCOUNT = #{minfreeparklotcount,jdbcType=DECIMAL},
+            </if>
+        </set>
+        where PARKPOTID = #{parkpotid,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.sunland.pojo.TParkpot">
+    update T_PARKPOT
+    set PARKPOTNAME = #{parkpotname,jdbcType=VARCHAR},
+      PARKPOTTYPE = #{parkpottype,jdbcType=CHAR},
+      PARKPOTCLASSIFY = #{parkpotclassify,jdbcType=CHAR},
+      PARKPOTSTATE = #{parkpotstate,jdbcType=CHAR},
+      DEPTCODE = #{deptcode,jdbcType=VARCHAR},
+      AREAID = #{areaid,jdbcType=VARCHAR},
+      GROUPID = #{groupid,jdbcType=DECIMAL},
+      DEPARTMENT = #{department,jdbcType=VARCHAR},
+      ADDRESS = #{address,jdbcType=VARCHAR},
+      TELEPHONE = #{telephone,jdbcType=VARCHAR},
+      DESCRIPTION = #{description,jdbcType=VARCHAR},
+      PAYMODE = #{paymode,jdbcType=CHAR},
+      CHARGEMODE = #{chargemode,jdbcType=CHAR},
+      CHARGESTANDARD = #{chargestandard,jdbcType=VARCHAR},
+      SERVERTIMEINFO = #{servertimeinfo,jdbcType=VARCHAR},
+      PARKINNUM = #{parkinnum,jdbcType=DECIMAL},
+      PARKOUTNUM = #{parkoutnum,jdbcType=DECIMAL},
+      TOTALPARKLOTCOUNT = #{totalparklotcount,jdbcType=DECIMAL},
+      FIXEDPARKLOTCOUNT = #{fixedparklotcount,jdbcType=DECIMAL},
+      FREEPARKLOTCOUNT = #{freeparklotcount,jdbcType=DECIMAL},
+      LASTFREEPARKLOTTIME = #{lastfreeparklottime,jdbcType=TIMESTAMP},
+      METERCOUNT = #{metercount,jdbcType=DECIMAL},
+      CREATEDATE = #{createdate,jdbcType=TIMESTAMP},
+      SETUPTIME = #{setuptime,jdbcType=TIMESTAMP},
+      MAPNO = #{mapno,jdbcType=VARCHAR},
+      DATASOURCES = #{datasources,jdbcType=CHAR},
+      SOURCEKEY = #{sourcekey,jdbcType=VARCHAR},
+      HASCHECK = #{hascheck,jdbcType=CHAR},
+      LASTENDDATE = #{lastenddate,jdbcType=TIMESTAMP},
+      MINFREEPARKLOTCOUNT = #{minfreeparklotcount,jdbcType=DECIMAL}
+    where PARKPOTID = #{parkpotid,jdbcType=VARCHAR}
+  </update>
+</mapper>

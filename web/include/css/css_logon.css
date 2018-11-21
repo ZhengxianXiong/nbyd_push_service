@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+html {
+    overflow: hidden;
+}
+
+body {
+    font-family: "微软雅黑", "幼圆", "宋体";
+    background: url(../images/logon/bj.png) center top #fff repeat-x;
+    scroll: "no";
+}
+
+.wrap {
+    background: url(../images/logon/login_bg.png) center top no-repeat;
+}
+
+.main {
+    width: 895px;
+    height: 550px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+#content {
+    height: 400px;
+}
+
+#right {
+    float: right;
+    margin-top: 130px;
+}
+
+table {
+    width: 403px;
+}
+
+.yinying {
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#909090, direction=120, strength=4); /*ie*/
+    -moz-box-shadow: 2px 2px 10px #909090; /*firefox*/
+    -webkit-box-shadow: 2px 2px 10px #909090; /*safari或chrome*/
+    box-shadow: 2px 2px 10px #909090; /*opera或ie9*/
+}
+
+input {
+    height: 24px;
+    line-height: 24px;
+    width: 228px;
+    border: 1px solid #C6CACD;
+    border-radius: 2px;
+    padding: 1px;
+}
+
+input:hover {
+    line-height: 24px;
+    border: 1px solid #1481b4;
+    background: #d0e9f7;
+}
+
+button {
+    background: url(../images/logon/btn.png) 0 0 no-repeat;
+    width: 98px;
+    height: 24px;
+    border: none;
+    color: #654329;
+}
+
+button:hover {
+    background: url(../images/logon/btn.png) 0 -33px no-repeat;
+}
+
+#footer {
+    display: block;
+    clear: left;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    color: #737373;
+}
+
+.tips {
+    text-align: center;
+    color: #F00;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.tips ul, .tips ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

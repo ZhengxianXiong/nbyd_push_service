@@ -1,0 +1,89 @@
+/**
+*��cssΪ����jquery�Դ���css�⣬ʵ������Ҫ���ӵ���ʽ
+*
+**/
+.subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    padding: 10px 5px;
+}
+
+.toolbar {
+    padding: 4px 5px;
+    background: url('images/ui-bg_fine-grain_10_f8f7f6_60x60.png') repeat;
+
+}
+
+.td_wf {
+    border-right: 0px solid #64A4EA;
+    border-bottom: 0px solid #64A4EA;
+    font: normal 12px "����";
+    color: #000000;
+    height: 25px;
+    padding-left: 5px;
+    border-top-color: #64A4EA;
+    border-left-color: #64A4EA;
+    background: #D7E9FB;
+}
+
+.td_th {
+
+    font: normal 12px "����";
+    color: #000000;
+    height: 25px;
+    padding-left: 1px;
+    background: url('images/ui-bg_fine-grain_15_eceadf_60x60.png') repeat;;
+}
+
+.td_td {
+
+    font: normal 12px "����";
+    color: #000000;
+    height: 25px;
+}
+
+.searchwords {
+    color: #444;
+    font-size: 12px;
+}
+
+.showRightOverFlow {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 22px;
+    bottom: 20px;
+    border: solid 1px #432B6A;
+    z-index: 99999;
+}
+
+/*
+��ҳͷ����ʽ
+*/
+#css3menu li {
+    float: left;
+    list-style-type: none;
+    font-family: "΢���ź�", "��Բ", "����";
+    font-size: 12px;
+}
+
+#css3menu li a {
+    color: #a8594c;
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+#css3menu li a:hover {
+    font-weight: bold;
+    color: #ff7c00;
+}
+
+#css3menu li a.active {
+    color: #ff7c00;
+    font-weight: bold;
+}
+
+.banner_font {
+    color: #d28264;
+}

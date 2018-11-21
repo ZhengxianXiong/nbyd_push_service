@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+    <!--<import resource="classpath:META-INF/cxf/cxf-extension-xml.xml"/>-->
+
+    <!--<bean id="testServiceImpl" class="com.sunland.webservice.impl.TestServiceImpl"/>-->
+    <!--<jaxws:endpoint id="testService" implementor="#testServiceImpl" address="/testService">-->
+    <!--<jaxws:inInterceptors>-->
+    <!--<bean class="com.sunland.webservice.WebServiceInterceptor"/>-->
+    <!--</jaxws:inInterceptors>-->
+    <!--</jaxws:endpoint>-->
+
+    <!--<bean id="loginServiceImpl" class="com.sunland.webservice.impl.LoginServiceImpl"/>-->
+    <!--<jaxws:endpoint id="loginService" implementor="#loginServiceImpl" address="/loginService">-->
+    <!--<jaxws:inInterceptors>-->
+    <!--<bean class="com.sunland.webservice.WebServiceInterceptor"/>-->
+    <!--</jaxws:inInterceptors>-->
+    <!--</jaxws:endpoint>-->
+
+    <!--<bean id="queryServiceImpl" class="com.sunland.webservice.impl.QueryServiceImpl"/>-->
+    <!--<jaxws:endpoint id="queryService" implementor="#queryServiceImpl" address="/queryService">-->
+    <!--<jaxws:inInterceptors>-->
+    <!--<bean class="com.sunland.webservice.WebServiceInterceptor"/>-->
+    <!--</jaxws:inInterceptors>-->
+    <!--</jaxws:endpoint>-->
+
+    <!--<bean id="caseServiceImpl" class="com.sunland.webservice.impl.CaseServiceImpl"/>-->
+    <!--<jaxws:endpoint id="caseService" implementor="#caseServiceImpl" address="/caseService">-->
+    <!--<jaxws:inInterceptors>-->
+    <!--<bean class="com.sunland.webservice.WebServiceInterceptor"/>-->
+    <!--</jaxws:inInterceptors>-->
+    <!--</jaxws:endpoint>-->
+</beans>

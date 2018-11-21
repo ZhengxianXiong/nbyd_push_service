@@ -1,0 +1,431 @@
+
+.headcontainer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    background: url(../images/logon/login2/topBG.png) repeat-x;
+}
+
+.headcontainer {
+    height: 100px;
+    width: 100%
+}
+
+/* .container{
+	position:absolute;
+	width:100%;
+
+} */
+
+html {
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    scroll: no;
+    overflow: hidden;
+    /*  font-family:"微软雅黑", "幼圆", "宋体" */
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", "sans-serif";
+}
+
+#header_pic_area {
+    position: absolute;
+    height: 100px;
+    width: 50%;
+    left: 25%;
+
+}
+
+#headcontainer {
+    width: 420px;
+    height: 28px;
+    position: absolute;
+    margin-left: 257px;
+    margin-top: 22px;
+    background: url(../images/logon/login2/head.png) no-repeat;
+
+}
+
+#header_park {
+    width: 257px;
+    height: 73px;
+    position: absolute;
+    margin-left: 0;
+
+}
+
+#header_area {
+    position: absolute;
+    height: 73px;
+    width: 674px;
+    margin-top: 14px;
+
+}
+
+#header_park img {
+    width: 257px;
+    height: 73px
+}
+
+#footer {
+    position: absolute;
+    margin-bottom: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: url(../images/logon/login2/14.png) repeat-x;
+    width: 100%
+}
+
+#login_index {
+    /* position:absolute; */
+    width: 100%;
+    height: 500px;
+    /* margin-left:0;
+    margin-right:0; */
+    text-align: center;
+}
+
+#login_area {
+    /*  position:absolute;  */
+    margin: 0 auto;
+    height: 290px;
+    margin-top: 5%;
+    /* margin-top:5%; */
+    /* 	border:1px solid #428ece;   */
+    border: 1px solid #efebef;
+    width: 500px;
+    text-align: center;
+    /* 	left:30%; */
+    /* float:center */
+}
+
+#login_tittle {
+    height: 40px;
+    width: 85%;
+    margin: auto;
+    border-bottom: 2px solid #428ece;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    background: #428ece;
+    margin-top: 25px;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    /* border:1px solid red */
+
+}
+
+#tb {
+
+    margin-top: 20px;
+    margin-left: 0%;
+    /* border:1px solid red */
+}
+
+.login_info {
+    /* position:absolute; */
+    height: 35px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#login_username {
+    margin-top: 100px;
+
+}
+
+.label {
+    /* position:absolute; */
+    width: 25%;
+    height: 35px;
+    line-height: 33px;
+    font-size: 13px;
+    font-family: "微软雅黑", "幼圆", "宋体";
+    color: #000000
+}
+
+input {
+    height: 30px;
+    line-height: 30px;
+
+    /* input还有一个宽度的设置在这里 */
+    width: 85%;
+    border: 1px solid #428ece;
+    border-radius: 2px;
+    padding: 1px;
+}
+
+input:hover {
+    line-height: 30px;
+    border: 1px solid #1481b4;
+    background: #d0e9f7;
+}
+
+#login_password {
+    margin-top: 150px
+}
+
+#button_area {
+    /* position:absolute; */
+    width: 80%;
+    /* 如果要在两个浏览器对其，需要下面两个设置； */
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
+    margin-top: 20px;
+}
+
+#login_button {
+    /* position:absolute; */
+    width: 143px;
+    height: 100%;
+    /* 如果要在两个浏览器对其，需要下面两个设置； */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    background: #f78a21;
+    /* color:white; */
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    border-radius: 2px;
+    background: url(../images/logon/login2/button.png) no-repeat;
+}
+
+#login_button:hover {
+    background: #e8ca56;
+    /* 	color:white; */
+    font-size: 15px;
+    background: url(../images/logon/login2/button_onhover.png) no-repeat;
+}
+
+#tip_area {
+    /* position:absolute; */
+    width: 80%;
+    /* 如果要在两个浏览器对其，需要下面两个设置； */
+    margin-left: auto;
+    margin-right: auto;
+    height: 28px;
+    margin-top: 3px;
+    /* border:1px solid red; */
+
+}
+
+#tip {
+    /* position:absolute; */
+    width: 80%;
+    height: 100%;
+    /* 如果要在两个浏览器对其，需要下面两个设置； */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+
+    background: white;
+    color: red;
+    text-align: center;
+    line-height: 28px;
+
+}
+
+#function_area {
+    position: absolute;
+    height: 40px;
+    width: 50%;
+    left: 25%;
+
+}
+
+#function1 {
+    position: absolute;
+    height: 40px;
+    width: 25%;
+    left: 0;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+
+}
+
+#function1_text {
+    position: absolute;
+    height: 40px;
+    left: 0;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    width: 80%;
+    cursor: pointer;
+}
+
+#function1_img {
+    position: absolute;
+    height: 40px;
+    left: 80%;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    width: 20%;
+    margin-top: 13px
+}
+
+#function1_img img {
+    position: absolute;
+    margin-top: 0
+}
+
+#function2 {
+    position: absolute;
+    height: 40px;
+    width: 25%;
+    left: 25%;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+
+}
+
+#function2_text {
+    position: absolute;
+    height: 40px;
+    left: 0;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    width: 80%;
+    cursor: pointer;
+}
+
+#function2_img {
+    position: absolute;
+    height: 40px;
+    left: 80%;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+    width: 20%;
+    margin-top: 13px
+}
+
+#function2_img img {
+    position: absolute;
+    margin-top: 0
+}
+
+#function3 {
+    position: absolute;
+    height: 40px;
+    width: 25%;
+    left: 50%;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+
+}
+
+#function3_text {
+    position: absolute;
+    height: 40px;
+    left: 0;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    width: 80%;
+    cursor: pointer;
+}
+
+#function3_img {
+    position: absolute;
+    height: 40px;
+    left: 80%;
+    color: white;
+    /* line-height:40px; */
+    text-align: center;
+    font-size: 12px;
+    width: 20%;
+    margin-top: 13px;
+    /* 	border:1px solid red */
+}
+
+#function3_img img {
+    position: absolute;
+    margin-top: 0
+}
+
+#function4 {
+    position: absolute;
+    height: 40px;
+    width: 25%;
+    left: 75%;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px
+}
+
+#function4_text {
+    position: absolute;
+    height: 40px;
+    left: 0;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    width: 80%;
+    cursor: pointer;
+}
+
+#function4_img {
+    position: absolute;
+    height: 40px;
+    left: 80%;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+    width: 20%;
+    margin-top: 13px;
+
+}
+
+#banquan {
+    position: absolute;
+    height: 35px;
+    width: 100%;
+    /* 	left:35%; */
+    margin-top: 33px;
+    color: white;
+    line-height: 36px;
+    font-size: 12px;
+    text-align: center;
+
+}
+
+a {
+    color: white;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline;
+    color: white
+}
+
+button {
+    width: 98px;
+    height: 24px;
+    border: none;
+    color: #000;
+}

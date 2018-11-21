@@ -1,0 +1,14 @@
+
+.top_di {
+    height: 30px;
+    text-align: left;
+    line-height: 30px;
+    padding-left: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom-color: rgb(255, 119, 0);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    background-image: url("../images/menu_top.jpg");
+    background-repeat: repeat-y;
+}

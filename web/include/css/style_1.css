@@ -1,0 +1,305 @@
+@charset "gb2312";
+
+/*********独立表格样式**********/
+.tabletextwhite td {
+    color: #FFFFFF;
+
+}
+
+.tableHeader {
+    background: #e0ebf2;
+    text-align: center;
+}
+
+.table_list {
+    border: 1px;
+    background-color: #85a3c8;
+}
+
+.table_list th {
+    background: #e0ebf2;
+    font: normal 12px "宋体";
+    color: #000000;
+    height: 25px;
+    text-align: center;
+}
+
+.table_list td {
+    font: normal 12px "宋体";
+    color: #000000;
+    height: 25px;
+    text-align: center;
+}
+
+.table_more {
+    border: 1px;
+    border-left: 1px solid #85a3c8;
+    border-top: 1px solid #85a3c8;
+    font: normal 12px "宋体";
+    color: #FF0000;
+
+}
+
+.table_more td {
+    background: #e0ebf2;
+    border-right: 1px solid #85a3c8;
+    border-bottom: 1px solid #85a3c8;
+    font: normal 12px "宋体";
+    color: #ff0000;
+    height: 30px;
+
+}
+
+/************** 单元格中的表格样式***************/
+.table_in {
+
+}
+
+.table_in_th {
+    background: #e0ebf2;
+    border-right: 1px solid #85a3c8;
+    border-bottom: 0px solid #85a3c8;
+    font: normal 14px "宋体";
+    color: #000000;
+    height: 25px;
+    text-align: center;
+}
+
+.table_in_td {
+    background: #Eff4f8;
+    border-right: 1px solid #85a3c8;
+    border-bottom: 0px solid #85a3c8;
+    font: normal 12px "宋体";
+    color: #000000;
+    height: 25px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/******* ↓ 右下角单元格样式*******/
+
+.table_in_td_right {
+    background: #Eff4f8;
+    border-right: 0px solid #85a3c8;
+    border-bottom: 0px solid #85a3c8;
+    font: normal 12px "宋体";
+    color: #000000;
+    height: 25px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/***/
+
+/************** ↑单元格中的表格样式***************/
+
+.th_wf {
+    background: #D7E9FB;
+    border-right: 0px solid #64A4EA;
+    border-bottom: 0px solid #64A4EA;
+    font: normal 13px "宋体";
+    color: #000000;
+    height: 25px;
+    text-align: right;
+    border-top-color: #64A4EA;
+    border-left-color: #64A4EA;
+}
+
+.th_wfdd {
+    background: #e0ebf2;
+    border-right: 0px solid #85a3c8;
+    border-bottom: 0px solid #85a3c8;
+    font: normal 13px "宋体";
+    text-align: right;
+    color: #000000;
+    height: 20px;
+    padding: 6px 1px 6px 0px;
+
+}
+
+.td_wfdd {
+    background: #Eff4f8;
+    border-right: 0px solid #85a3c8;
+    border-bottom: 0px solid #85a3c8;
+    font: normal 12px "宋体";
+    color: #000000;
+    height: 20px;
+    text-align: left;
+    padding-left: 1px;
+    padding: 6px 1px 6px 0px;
+}
+
+.th_wf_row {
+    background: #e0ebf2;
+    border-right: 1px solid #85a3c8;
+    border-bottom: 1px solid #85a3c8;
+    font: normal 13px "宋体";
+    color: #ff0000;
+    text-align: center;
+    font-weight: bold;
+}
+
+.td_wf {
+    border-right: 0px solid #64A4EA;
+    border-bottom: 0px solid #64A4EA;
+    font: normal 12px "宋体";
+    color: #000000;
+    height: 25px;
+    text-align: left;
+    padding-left: 5px;
+    border-top-color: #64A4EA;
+    border-left-color: #64A4EA;
+    background: #D7E9FB;
+}
+
+.table_last {
+    text-align: center;
+}
+
+.pageno {
+    color: #0000FF;
+    text-align: right;
+}
+
+.fieldset {
+    border: 0px solid #FF9A00;
+    font: normal 12px "宋体";
+    font-weight: bold;
+    color: #FF6600;
+}
+
+/* 按钮字体加粗样式*/
+.cmd_chu {
+    border: none;
+    background: url(../images/cmgbg.gif);
+    height: 20px;
+    width: 70px;
+    font: normal 12px "宋体";
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0px 0px 0px 0px;
+    padding: 3px 0 0 0;
+    cursor: hand;
+}
+
+.cmd2_chu {
+    border: none;
+    background: url(../../images/cmgbg2.gif);
+    height: 20px;
+    width: 102px;
+    font: normal 12px "宋体";
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0px 0px 0px 0px;
+    padding: 3px 0 0 0;
+    cursor: hand;
+}
+
+.generalcmd {
+    border: none;
+    background: url(../../images/generalcmgbg.gif);
+    height: 16px;
+    width: 90px;
+    font: normal 12px "宋体";
+    color: #ffffff;
+    margin: 0px 0px 0px 0px;
+    cursor: hand;
+}
+
+.generalcmd2 {
+    border: none;
+    background: url(../../images/generalcmgbg2.gif);
+    height: 16px;
+    width: 100px;
+    font: normal 12px "宋体";
+    color: #ffffff;
+    margin: 0px 0px 0px 0px;
+    cursor: hand;
+}
+
+.cmdjia {
+    border: none;
+    background: url(../images/cmgbgjia.gif);
+    height: 16px;
+    width: 60px;
+    font: normal 12px "宋体";
+    color: #ffffff;
+    margin: 0px 0px 0px 0px;
+    cursor: hand;
+    padding: 0px 0 0 0;
+}
+
+/********* ↓标题 *******/
+.caption {
+
+    border: 0px;
+    padding-left: 8px;
+    padding-top: 2px;
+    padding-bottom: 0px;
+}
+
+.caption td {
+    font: normal 13px "宋体";
+    color: #000000;
+    text-align: left;
+}
+
+/**************newadd weifa***************/
+
+.tablewf {
+    text-align: center;
+}
+
+.listbg /*内容栏背景*/
+{
+    background-color: #FFFFFF;
+    height: 22px;
+}
+
+.barbg /*小栏标题背景*/
+{
+    background-color: #DDF4F1;
+    height: 22px;
+}
+
+/*****************read only**********************/
+.readOnlyColor {
+    background-color: #E6E6E6;
+    border: 1 solid #7F9DB9;
+}
+
+.dateColor {
+    background-color: #BBD0F9;
+}
+
+.needColor {
+    color: #d11b00;
+}
+
+.subtitle {
+    font: normal 14px "宋体";
+    text-align: left;
+    text-indent: 0pt;
+}
+
+.style1 {
+    font-size: 13px;
+    font-weight: bold;
+    color: #2874C8;
+}
+
+.textCommon {
+    width: 90%;
+}
+
+.selectCommon {
+    width: 90%;
+}
+
+.searchText {
+    BACKGROUND-IMAGE: url(/images/searchText.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right center;
+
+}

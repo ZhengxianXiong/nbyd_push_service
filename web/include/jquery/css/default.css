@@ -1,0 +1,702 @@
+@charset "utf-8";
+* {
+    font: 12px/1.5 '宋体', tahoma, Srial, helvetica, sans-serif;
+}
+
+a {
+    color: Black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: Red;
+    text-decoration: underline;
+}
+
+.textbox03 {
+    border: #878787 1px solid;
+    padding: 4px 3px;
+    font: Verdana, Geneva, sans-serif, 宋体;
+    line-height: 14px;
+    background-color: #fff;
+    height: auto;
+    font-size: 14px;
+    font-weight: bold;
+    width: 190px;
+}
+
+.txt01 {
+    font: Verdana, Geneva, sans-serif, 宋体;
+    padding: 3px 2px 2px 2px;
+    border-width: 1px;
+    border-color: #ddd;
+    color: #000;
+}
+
+.txt {
+    border: #878787 1px solid;
+    padding: 4px 3px;
+    font: Verdana, Geneva, sans-serif, 宋体;
+    line-height: 14px;
+    background-color: #fff;
+    height: auto;
+    font-size: 14px;
+}
+
+.footer {
+    text-align: center;
+    color: #15428B;
+    margin: 0px;
+    padding: 0px;
+    line-height: 23px;
+    font-weight: bold;
+}
+
+.head a {
+    color: White;
+    text-decoration: underline;
+}
+
+.easyui-accordion ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+}
+
+.easyui-accordion ul {
+    padding: 10px 1px;
+}
+
+.easyui-accordion ul li {
+    padding: 0px;
+    margin: 1px 0;
+}
+
+.easyui-accordion ul li a {
+    color: #1d4e6c;
+}
+
+.easyui-accordion ul li a .nav {
+    margin-left: 2px;
+}
+
+.easyui-accordion ul li div {
+    margin: 0;
+    padding: 4px 0 4px 12px;
+    background: #fff;
+}
+
+.easyui-accordion ul li div.hover {
+    margin: 0;
+    background: #fefaf0;
+    padding: 3px 0 3px 12px;
+    border-top: 1px solid #f2d380;
+    border-bottom: 1px solid #f2d380;
+    cursor: pointer;
+}
+
+.easyui-accordion ul li div.hover a {
+    color: #024007;
+    text-decoration: none;
+}
+
+.easyui-accordion ul li div.selected {
+    margin: 0; /*background:#effdec; padding:3px 0 3px 20px; border-top:1px solid #99e290; border-bottom:1px solid #99e290;*/
+    background: #fefaf0;
+    padding: 3px 0 3px 12px;
+    border-top: 1px solid #f2d380;
+    border-bottom: 1px solid #f2d380;
+    cursor: pointer;
+}
+
+.easyui-accordion ul li div.selected a {
+    color: #024007;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.icon {
+    background: url(images/tabicons.png) no-repeat;
+    width: 18px;
+    line-height: 18px;
+    display: inline-block;
+}
+
+.icon-sys {
+    background-position: -298px -498px;
+}
+
+.accordion-header-selected .icon-sys {
+    background-position: -318px -498px;
+}
+
+.icon-set {
+    background-position: -380px -200px;
+}
+
+.icon-add {
+    background-position: -20px 0px;
+}
+
+.icon-add1 {
+    background: url('icon/edit_add.png') no-repeat;
+}
+
+.icon-nav {
+    background-position: -181px -160px;
+}
+
+.icon-users {
+    background-position: -100px -480px;
+}
+
+.icon-role {
+    background-position: -360px -200px;
+}
+
+.icon-set {
+    background-position: -380px -200px;
+}
+
+.icon-log {
+    background-position: -380px -80px;
+}
+
+.icon-delete16 {
+    background: url('icon/delete.gif') no-repeat;
+    width: 18px;
+    line-height: 18px;
+    display: inline-block;
+}
+
+.icon-delete {
+    background-position: -140px -120px;
+}
+
+.icon-edit {
+    background-position: -380px -320px;
+}
+
+.icon-magic {
+    background-position: 0px -500px;
+}
+
+.icon-database {
+    background-position: -20px -140px;
+}
+
+.icon-expand {
+    background: url('/images/coll2.gif') no-repeat;
+}
+
+.icon-collapse {
+    background: url('/images/coll3.gif') no-repeat;
+}
+
+/******************
+   基础管理子系统
+******************/
+/******** 前台组织管理*********/
+.icon-AreaList {
+    background-position: -100px -78px;
+}
+
+.icon-Workgroup {
+    background-position: -160px -98px;
+}
+
+.icon-OperatorList {
+    background-position: -160px -478px;
+}
+
+.icon-map {
+    background-position: -120px -258px;
+}
+
+/********停车场管理*********/
+.icon-ParkpotList {
+    background-position: -180px -79px;
+}
+
+.icon-ParkpotBusiness {
+    background-position: -340px -498px;
+}
+
+.icon-ParkpotCheckList {
+    background-position: -361px -497px;
+}
+
+.icon-MonitorParkpot {
+    background-position: -160px -99px;
+}
+
+/********统一支付管理*********/
+.icon-ShopManage {
+    background-position: -100px -478px;
+}
+
+.icon-OperatorSettlement {
+    background-position: -380px -498px;
+}
+
+.icon-ShopSettlement {
+    background-position: 0 -518px;
+}
+
+/********泊位管理*********/
+.icon-Park {
+    background-position: -80px -38px;
+}
+
+.icon-ParkPoint {
+    background-position: -200px -38px;
+}
+
+.icon-ParkLot {
+    background-position: -240px -38px;
+}
+
+/********泊位相关业务管理*********/
+.icon-Business {
+    background-position: -180px -58px;
+}
+
+.icon-RepayManage {
+    background-position: -40px -98px;
+}
+
+.icon-repaySearch {
+    background-position: -80px -258px;
+}
+
+.icon-BusinessConsultLog {
+    background-position: -120px -78px;
+}
+
+.icon-BusinessProblem {
+    background-position: 0 -200px;
+}
+
+.icon-getPayBackList {
+    background-position: -20px -520px;
+}
+
+/********设备管理*********/
+.icon-Device {
+    background-position: -300px -158px;
+}
+
+/********对账管理*********/
+.icon-PayBatchList {
+    background-position: -160px -38px;
+}
+
+.icon-BusinessBatchList {
+    background-position: -300px 0;
+}
+
+.icon-AllBatch {
+    background-position: -240px -78px;
+}
+
+/********包月管理*********/
+.icon-vipVehicleManage {
+    background-position: -40px -518px;
+}
+
+.icon-vipVehicleHistorySearch {
+    background-position: -60px -518px;
+}
+
+.icon-vipTypeManage {
+    background-position: 0 -98px;
+}
+
+.icon-vipVehicleLogList {
+    background-position: -80px -518px;
+}
+
+/********排班管理*********/
+.icon-Schedule {
+    background-position: -100px 0;
+}
+
+.icon-Schedule2 {
+    background-position: -120px 0;
+}
+
+/********信息发布*********/
+.icon-Message {
+    background-position: -180px -178px;
+}
+
+.icon-AutoMessage {
+    background-position: -300px -218px;
+}
+
+/********发票管理*********/
+.icon-InvoiceInStore {
+    background-position: -100px -518px;
+}
+
+.icon-invoiceRollManage {
+    background-position: -120px -518px;
+}
+
+.icon-InvoiceSingleManage {
+    background-position: -140px -518px;
+}
+
+.icon-InvoiceChange {
+    background-position: -160px -518px;
+}
+
+/******************
+   系统管理
+******************/
+/********组织管理*********/
+.icon-DeptList {
+    background-position: -180px -518px;
+}
+
+.icon-User {
+    background-position: -160px -478px;
+}
+
+.icon-Role {
+    background-position: -380px -218px;
+}
+
+/********系统设置********/
+.icon-ParametersList {
+    background-position: -20px -98px;
+}
+
+.icon-SysParameter {
+    background-position: -40px -98px;
+}
+
+/********软件版本管理********/
+.icon-SysDownloadFileList {
+    background-position: -240px -298px;
+}
+
+/********日志设置********/
+.icon-SysServerlog {
+    background-position: -220px -418px;
+}
+
+/******************
+   监督管理子系统
+******************/
+/********后台泊位监督*********/
+.icon-ControlParkLot {
+    background-position: -120px -98px;
+}
+
+.icon-ControlDgdata {
+    background-position: -140px -258px;
+}
+
+.icon-ControlParkMap {
+    background-position: -120px -278px;
+}
+
+/********监督员管理*********/
+.icon-SupervisorList {
+    background-position: -200px -518px;
+}
+
+.icon-ControlSupervise {
+    background-position: -220px -518px;
+}
+
+.icon-ControlSuperviseEvent {
+    background-position: -240px -518px;
+}
+
+/********实时监控管理*********/
+.icon-FeeMonitoringList {
+    background-position: -80px -198px;
+}
+
+/********黑名单管理*********/
+.icon-BlackCardList {
+    background-position: -260px -478px;
+}
+
+.icon-Blacklistvehicle {
+    background-position: -60px -138px;
+}
+
+.icon-BlackCardListHistory {
+    background-position: -260px -518px;
+}
+
+/********地感比对*********/
+.icon-dgBusinessMatch {
+    background-position: -160px -18px;
+}
+
+.icon-dgParkPointMatch {
+    background-position: -240px -238px;
+}
+
+/******************
+   自发卡子系统
+******************/
+/********卡管理*********/
+.icon-cardInStorage {
+    background-position: -280px -518px;
+}
+
+.icon-cardSuperInStorage {
+    background-position: -300px -518px;
+}
+
+.icon-cardReportLoss {
+    background-position: -320px -518px;
+}
+
+.icon-cardRepair {
+    background-position: -340px -518px;
+}
+
+.icon-cardBalance {
+    background-position: -360px -518px;
+}
+
+.icon-cardInitialization {
+    background-position: -380px -518px;
+}
+
+.icon-cardFinanceWin {
+    background-position: 0 -538px;
+}
+
+.icon-cardWindowsWin {
+    background-position: -20px -538px;
+}
+
+.icon-cardWindowsSale {
+    background-position: -40px -538px;
+}
+
+.icon-cardRecover {
+    background-position: -340px -38px;
+}
+
+.icon-cardWindowsBack {
+    background-position: -60px -538px;
+}
+
+.icon-cardRecharge {
+    background-position: -80px -538px;
+}
+
+.icon-cardManage {
+    background-position: -100px -538px;
+}
+
+.icon-cardManage1 {
+    background-position: -120px -538px;
+}
+
+/********充值管理*********/
+.icon-ScardTransBlackcardList {
+    background-position: -220px -118px;
+}
+
+.icon-ScardTransList {
+    background-position: -20px -298px;
+}
+
+/********结算管理*********/
+.icon-SettleManage {
+    background-position: -80px -78px;
+}
+
+/******************
+   银行交互子系统
+******************/
+/********银行卡管理*********/
+.icon-BankCardList {
+    background-position: -140px -538px;
+}
+
+.icon-BankParkTransList {
+    background-position: -160px -538px;
+}
+
+.icon-BankPayList {
+    background-position: -180px -538px;
+}
+
+.icon-BankPayConfirmList {
+    background-position: -200px -538px;
+}
+
+.icon-BankTransBatchList {
+    background-position: -220px -538px;
+}
+
+.icon-BankCardOperate2 {
+    background-position: 0 -218px;
+}
+
+.icon-BankCardBalance {
+    background-position: -240px -538px;
+}
+
+/********清结算*********/
+.icon-CommuniteManage {
+    background-position: -181px -160px;
+}
+
+.icon-AutoAccount {
+    background-position: -181px -160px;
+}
+
+/********银行卡统计*********/
+.icon-BankCardStatistic {
+    background-position: -320px -78px;
+}
+
+/******************
+   数据分析决策系统
+******************/
+/********上岗情况查询*********/
+.icon-ParkPointMountguard {
+    background-position: -140px -338px;
+}
+
+.icon-OperatorMountguard {
+    background-position: -260px -538px;
+}
+
+/********当前排行榜*********/
+.icon-OperatorFeeRank {
+    background-position: -280px -538px;
+}
+
+.icon-WorkGroupFeeRankList {
+    background-position: -300px -538px;
+}
+
+.icon-ParkPointFeeRank {
+    background-position: -320px -538px;
+}
+
+.icon-BerthOccupancyRate {
+    background-position: -340px -538px;
+}
+
+.icon-OperatorRefuseRate {
+    background-position: -360px -538px;
+}
+
+.icon-WorkGroupRefuseRateList {
+    background-position: -380px -538px;
+}
+
+/********日常业务报表统计*********/
+.icon-BusinessDetail {
+    background-position: 0 -558px;
+}
+
+.icon-BusinessTotal {
+    background-position: -20px -558px;
+}
+
+.icon-OperatorTotal {
+    background-position: -40px -558px;
+}
+
+.icon-ParkPointTotal {
+    background-position: -60px -558px;
+}
+
+.icon-WorkGroupPrice {
+    background-position: -80px -558px;
+}
+
+.icon-WorkGroupHaschargePrice {
+    background-position: -100px -558px;
+}
+
+/********考核*********/
+.icon-StatKpiCreate {
+    background-position: -181px -160px;
+}
+
+.icon-StatKpi {
+    background-position: -181px -160px;
+}
+
+.icon-OperatorFailedList {
+    background-position: -120px -558px;
+}
+
+.icon-ParkpointFailedList {
+    background-position: -140px -558px;
+}
+
+.icon-lock {
+    background: url('../../easyui/themes/icons/lock.png') no-repeat;
+}
+
+.icon-lock_open {
+    background: url('../../easyui/themes/icons/lock_open.png') no-repeat;
+}
+
+/********       定义导航栏子菜单         *********/
+.subglobalNav {
+    display: none;
+    margin-left: -15px;
+    padding: 0;
+}
+
+.subglobalNav ul {
+    list-style-image: none;
+    list-style-type: none;
+    list-style-position: inside;
+
+}
+
+.subglobalNav ul li {
+    border-top: 1px solid #f9cac2;
+    border-bottom: none;
+    border-right: none;
+    padding-left: 0px;
+    margin: 0px;
+    background: #FFF2e9;
+}
+
+.subglobalNav a {
+    font-weight: normal;
+    padding: 0;
+    margin: 0px;
+    height: 18px;
+    color: #000000;
+}
+
+.subglobalNav LI a:link {
+    color: #000000;
+    font-weight: normal;
+
+}
+
+.subglobalNav LI a:active {
+
+    color: #000000;
+    font-weight: normal;
+    background: #FFFFFF;
+
+}
+
+.subglobalNav ul li a:hover {
+    background: url(../../images/over6.gif) repeat-x;
+}
+
+
+

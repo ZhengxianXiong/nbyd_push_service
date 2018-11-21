@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>Archetype Created Web Application</display-name>
+    <context-param>
+        <param-name>webAppRootKey</param-name>
+        <param-value>webappnbyd</param-value>
+    </context-param>
+    <!-- 配置log4j配置文件路径 -->
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>classpath:log4j2.xml</param-value>
+    </context-param>
+
+    <!-- Spring-mybatis的配置文件 -->
+    <!-- Spring-cxf的配置文件 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:spring-beans.xml
+            classpath:spring-mybatis.xml
+            classpath:spring-transaction.xml
+            <!--暂不启动webservice服务-->
+            <!--classpath:spring-cxf.xml-->
+        </param-value>
+    </context-param>
+
+    <!-- log4j监听器 -->
+    <listener>
+        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>
+    <!-- Spring监听器 -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <!-- 防止Spring内存溢出监听器 -->
+    <listener>
+        <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+    </listener>
+
+    <!-- 启动socket server -->
+    <!--<listener>
+        <listener-class>com.sunland.socketserver.StartServerListener</listener-class>
+    </listener>-->
+
+    <!-- 编码过滤器 -->
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- webservice 拦截器 -->
+    <!--<servlet>-->
+    <!--<servlet-name>CXFServlet</servlet-name>-->
+    <!--<servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>CXFServlet</servlet-name>-->
+    <!--<url-pattern>/webservice/*</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!-- Spring MVC 拦截器 -->
+    <servlet>
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring-mvc.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+        <async-supported>true</async-supported>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>45</session-timeout>
+        <!--<session-timeout>1</session-timeout>-->
+    </session-config>
+
+    <!--<jsp-config>-->
+    <!--<taglib>-->
+    <!--<taglib-uri>/WEB-INF/app.tld</taglib-uri>-->
+    <!--<taglib-location>/WEB-INF/tlds/app.tld</taglib-location>-->
+    <!--</taglib>-->
+    <!--</jsp-config>-->
+
+    <!--<welcome-file-list>
+        <welcome-file>/index.jsp</welcome-file>
+    </welcome-file-list>-->
+
+</web-app>

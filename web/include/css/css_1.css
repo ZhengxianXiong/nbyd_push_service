@@ -1,0 +1,624 @@
+@charset "gb2312";
+/***********************************************/
+
+/***********************************************/
+
+/***********************************************/
+
+/***********************************************/
+
+body {
+    font-family: "宋体", Arial, sans-serif;
+    font-size: 13px;
+    color: #222222;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    background: #ffffff;
+}
+
+a {
+    color: #205AA7;
+    text-decoration: none;
+}
+
+a:link {
+    color: #205AA7;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #205AA7;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #205AA7;
+    text-decoration: underline;
+}
+
+h1 {
+    font-family: "宋体", Arial, sans-serif;
+    font-size: 120%;
+    color: #184785;
+    margin: 0px;
+    padding: 0px;
+}
+
+h2 {
+    font-family: "宋体", Arial, sans-serif;
+    font-size: 104%;
+    color: #205AA7;
+    margin: 0px;
+    padding: 0px;
+}
+
+h3 {
+    font-family: "宋体", Arial, sans-serif;
+    font-size: 100%;
+    color: #184785;
+    margin: 0px;
+    padding: 0px;
+}
+
+h4 {
+    font-family: Arial, sans-serif;
+    font-size: 100%;
+    color: #222222;
+    margin: 0px;
+    padding: 0px;
+}
+
+h5 {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 100%;
+    color: #184785;
+    margin: 0px;
+    padding: 0px;
+}
+
+h6 {
+    font-family: "宋体", Arial, sans-serif;
+    font-size: 13px;
+    color: #000000;
+    margin: 0px;
+    padding-bottom: 10px;
+    font-weight: bold;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+/***********************************************/
+/* Layout Divs（主层次）                       */
+/* masthead:主框架的上部（包括背景）           */
+/* main:主体内容							   */
+/* entireBar:为了控制总体菜单长度，保证        */
+/*			退出在浏览器最底部                 */
+/* navBar:导航栏（左栏）                       */
+/* navBar-end:导航栏（退出）                   */
+/* navBar-top:导航栏（用于框架结构）           */
+/* content:正文内容                            */
+/* siteinfo:版权信息                           */
+/***********************************************/
+
+#masthead {
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    width: 100%;
+    height: 72px;
+    background: #AFCCF4;
+    background: url(../images/wytop20.gif) no-repeat;
+
+}
+
+#main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+}
+
+#EntireBar {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+}
+
+#navBar {
+    margin: 0 0 45px 0;
+    padding: 0;
+    background: #efefef;
+    text-align: left;
+
+}
+
+#navBar-end {
+    text-align: center;
+    margin: 0 0 0 0;
+    height: 18px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#navBar-top {
+    margin: 0 80% 0 0;
+    padding: 0;
+    background: #efefef;
+}
+
+/**************导航栏背景*************/
+.gray {
+    background: #efefef;
+}
+
+#topmap {
+    height: 72px;
+    background: url(../images/wytop200.gif);
+    margin: 0 0 0 0;
+    width: 100%;
+
+}
+
+/*********** #standbyBar link styles ***********/
+#standbyBar {
+    height: 22px;
+    background: url(../images/standbybg.gif);
+    margin: 0 0 0 0;
+    width: 100%;
+    float: left;
+}
+
+#standbyBar2 {
+    height: 24px;
+    background: url(../images/standbybg.gif);
+    margin: 0 0 0 -80%;
+    width: 100%;
+    float: right;
+}
+
+/************* #globalNav styles **************/
+/********       定义工具栏菜单       *********/
+
+#globalNav {
+    padding: 5px 20px 0 10px;
+    color: #333333;
+    text-align: right;
+
+}
+
+#globalNav img {
+    display: block;
+}
+
+#globalNav a {
+    padding: 5px 20px 0 10px;
+    color: #333333;
+}
+
+/*********** #navBar link styles ***********/
+
+#navBar-top h3 {
+    margin: 0 0 0 0;
+    padding: 16px 0px 16px;
+    padding-left: 0;
+    background: url(../images/navbarh3bg.gif); /*****standbybg.gif*******/
+    color: #103667;
+    text-align: center;
+    font-size: 112%;
+
+}
+
+#navBar ul {
+    margin: 0 0 0 0;
+}
+
+/*********** #保证主栏样式不变***********/
+#gl1, #gl2, #gl3, #gl4, #gl5, #gl6, #gl7, #gl8, #gl9, #gl10, #gl11, #gl12, #gl13, #gl14, #gl15, #gl16, #gl17, #gl18, #gl19 {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* hack to fix IE/Win's broken rendering of block-level anchors in lists
+#login li {border-bottom: 1px solid #EEE;}*/
+
+/* fix for browsers that don't need the hack 
+html>body #login li {border-bottom: none;}*/
+
+/*********** #subglobalNav link styles ***********/
+/********       定义导航栏子菜单         *********/
+.subglobalNav {
+    display: none;
+    margin-left: -15px;
+    padding: 0;
+}
+
+.subglobalNav ul {
+    list-style-image: none;
+    list-style-type: none;
+    list-style-position: inside;
+
+}
+
+.subglobalNav ul li {
+    border-top: 1px solid #f9cac2;
+    border-bottom: none;
+    border-right: none;
+    padding-left: 0px;
+    margin: 0px;
+    background: #FFF2e9;
+}
+
+.subglobalNav a {
+    font-weight: normal;
+    padding: 0;
+    margin: 0px;
+    height: 18px;
+    color: #000000;
+}
+
+.subglobalNav LI a:link, a:visited {
+    color: #000000;
+    font-weight: normal;
+
+}
+
+.subglobalNav LI a:active {
+
+    color: #000000;
+    font-weight: normal;
+    background: #FFFFFF;
+
+}
+
+.subglobalNav ul li a:hover {
+    background: url(../images/over6.gif) repeat-x;
+}
+
+/************* .cmd styles ***********
+
+.cmd {
+border:none;
+height:16px;
+width:70px;
+margin:10px 0px 5px 0px;
+padding-top:2px;
+}
+************  按钮样式  ***************/
+
+/************** .arrow-marker styles ***************/
+/************** 导航菜单样式 ***********************/
+.arrow-marker {
+    LIST-STYLE-IMAGE: url(../images/wyarrow8.gif);
+    list-style-position: inside;
+    line-height: 1.5;
+    font-size: 100%;
+    color: #ffffff;
+    font-weight: bold;
+
+}
+
+.arrow-marker a {
+    display: block;
+    padding: 2px 0px 3px 10px;
+    margin-bottom: 0px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: hand;
+}
+
+.arrow-marker li a:hover {
+    background: url(../images/over.gif) repeat-x;
+}
+
+.arrow-marker LI {
+    border-bottom: 1px solid #fff;
+    background: url(../images/menubg.jpg) repeat-x;
+    margin: 0;
+
+}
+
+/************** navBar-end styles ***************/
+#navBar-end a {
+    padding-top: 6px;
+    height: 20px;
+    background: url(../images/standbybg.gif);
+    border-top: 1px solid #ccc;
+    display: block;
+}
+
+#navBar-end a:hover {
+    background-color: #ddeeff;
+}
+
+/************** .content styles ***************/
+/********* 以下部分是操作页面的样式定义********/
+
+td {
+    FONT-SIZE: 12px;
+    color: #000000;
+}
+
+.tdtitle {
+    background: url(../../images/contentTitlebg.gif) no-repeat;
+    text-align: left;
+    padding-left: 30px;
+    font: italic bold 14px "宋体";
+}
+
+.cmd_page {
+    border: none;
+    background: url(../images/cmgbg_18_50.gif);
+    height: 18px;
+    width: 50px;
+    font: normal 12px "宋体";
+    color: #ffffff;
+    margin: 0px 0px 0px 0px;
+    padding: 3px 0 0 0;
+    cursor: hand;
+}
+
+.cmdhref {
+    border: none;
+    background: url(../images/weihu.gif);
+    height: 20px;
+    width: 52px;
+    font: normal 12px "宋体";
+    color: #ffffff;
+    margin: 0px 0px 0px 0px;
+    padding: 3px 0 0 0;
+    cursor: hand;
+}
+
+.cmd {
+    border: none;
+    background: url(../../images/cmgbg.gif);
+    height: 20px;
+    width: 70px;
+    font: normal 12px "宋体";
+    color: #ffffff;
+    margin: 0px 0px 0px 0px;
+    padding: 3px 0 0 0;
+    cursor: hand;
+}
+
+.cml {
+    border: none;
+    background: url(../images/cmgbg2.gif);
+    height: 20px;
+    width: 102px;
+    font: normal 12px "宋体";
+    color: #ffffff;
+    margin: 0px 0px 0px 0px;
+    padding: 3px 0 0 0;
+    cursor: hand;
+}
+
+.cmd2 {
+    border: none;
+    background: url(../images/cmgbg2.gif);
+    height: 20px;
+    width: 102px;
+    font: normal 12px "宋体";
+    color: #ffffff;
+    margin: 0px 0px 0px 0px;
+    padding: 3px 0 0 0;
+    cursor: hand;
+}
+
+.superbigcmd {
+    border: none;
+    background: url(../images/superbigcmgbg.gif);
+    height: 18px;
+    width: 190px;
+    font: normal 12px "宋体";
+    color: #ffffff;
+    margin: 0px 0px 0px 0px;
+    cursor: hand;
+}
+
+.button {
+    border: none;
+    background: #ffffff;
+    padding: 2px 0 0 0;
+    font: normal 12px "宋体";
+    color: #000000;
+    cursor: hand;
+}
+
+.table_comm1 {
+    border-top: 0px solid #85a3c8;
+    border-left: 0px solid #85a3c8;
+    background: #85a3c8;
+    padding-top: 0px;
+    padding-bottom: 0px; /* 00000000000000000000000000*/
+}
+
+.table_comm {
+    border-top: 1px solid #64A4EA;
+    border-left: 1px solid #64A4EA;
+    background: #D7E9FB;
+    border-right-color: #64A4EA;
+    border-bottom-color: #64A4EA;
+}
+
+.table_comm td {
+    border-right: 1px solid #64A4EA;
+    border-bottom: 1px solid #64A4EA;
+}
+
+.table_comm a {
+    color: #205AA7;
+    font: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.table_comm a:link {
+    color: #205AA7;
+    font: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.table_comm a:visited {
+    color: #000000;
+    font: nomal 12px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.table_comm a:hover {
+    color: #205AA7;
+    font: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.td {
+    background: #Eff4f8;
+    border-right: 1px solid #85a3c8;
+    border-bottom: 1px solid #85a3c8;
+    font: normal 12px "宋体";
+    color: #000000;
+    height: 25px;
+    text-align: center;
+}
+
+.th {
+    background: #e0ebf2;
+    border-right: 1px solid #85a3c8;
+    border-bottom: 1px solid #85a3c8;
+    font: normal 14px "宋体";
+    color: #000000;
+    height: 25px;
+    text-align: center;
+}
+
+.link a {
+    color: #205AA7;
+    font: 13px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.link a:link {
+    color: #205AA7;
+    font: 13px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.link a:visited {
+    color: #E33539;
+    font: normal 13px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.link a:hover {
+    color: #205AA7;
+    font: 13px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.table {
+    background-color: #D8F3FE;
+}
+
+.table_comm_x {
+    font-size: 12px;
+    color: #333666;
+    font-family: "宋体";
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #64A4EA;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #64A4EA;
+    background-color: #D8F3FE;
+}
+
+.table_comm_x tr {
+    line-height: 18px;
+}
+
+.table_comm_x tr td {
+    line-height: 18px;
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-left-style: solid;
+    border-top-style: solid;
+    border-left-color: #64A4EA;
+    border-top-color: #64A4EA;
+}
+
+/*********************keyboard*****************/
+
+.num {
+    border: none;
+    background: #Eff4f8;
+    width: 40px;
+}
+
+/***********************submenu************************/
+#sub {
+    margin: -26px 0 25px 0;
+    background: #FFF2e9;
+    height: 20px;
+    border-top: 1px solid #f9cac2;
+}
+
+#submenu {
+    float: left;
+    padding-top: 5px;
+    height: 30px;
+}
+
+#submenu a {
+    text-decoration: underline;
+    font-size: 13px;
+    color: #000000;
+
+    padding: 3px 5px 0 5px;
+    height: 20px;
+
+}
+
+#submenu a:hover {
+
+    font-size: 13px;
+    color: #E33539;
+    text-decoration: underline;
+    padding: 3px 5px 0 5px;
+
+}
+
+#submenu a:active {
+    text-decoration: underline;
+
+    font-size: 13px;
+    color: #E33539;
+
+    padding: 3px 5px 0 5px;
+
+}
+
+.border {
+    /*
+    background:url() no-repeat;*/
+    width: 5px;
+    height: 27px;
+    float: left;
+}
+
+.pageEnd {
+    page-break-after: always
+}
